@@ -9,7 +9,32 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="108ed49c-43d1-40fc-a621-fdf36e3d4c4b" name="Changes" comment="" />
+    <list default="true" id="108ed49c-43d1-40fc-a621-fdf36e3d4c4b" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.MitDenkt/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MitDenkt/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MitDenkt/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MitDenkt/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MitDenkt/bin/Debug/net8.0/MitDenkt.dll" beforeDir="false" afterPath="$PROJECT_DIR$/MitDenkt/bin/Debug/net8.0/MitDenkt.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MitDenkt/bin/Debug/net8.0/MitDenkt.exe" beforeDir="false" afterPath="$PROJECT_DIR$/MitDenkt/bin/Debug/net8.0/MitDenkt.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MitDenkt/bin/Debug/net8.0/MitDenkt.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/MitDenkt/bin/Debug/net8.0/MitDenkt.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MitDenkt/obj/Debug/net8.0/MitDenkt.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MitDenkt/obj/Debug/net8.0/MitDenkt.AssemblyInfo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MitDenkt/obj/Debug/net8.0/MitDenkt.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/MitDenkt/obj/Debug/net8.0/MitDenkt.AssemblyInfoInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MitDenkt/obj/Debug/net8.0/MitDenkt.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/MitDenkt/obj/Debug/net8.0/MitDenkt.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MitDenkt/obj/Debug/net8.0/MitDenkt.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/MitDenkt/obj/Debug/net8.0/MitDenkt.assets.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MitDenkt/obj/Debug/net8.0/MitDenkt.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/MitDenkt/obj/Debug/net8.0/MitDenkt.csproj.FileListAbsolute.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MitDenkt/obj/Debug/net8.0/MitDenkt.dll" beforeDir="false" afterPath="$PROJECT_DIR$/MitDenkt/obj/Debug/net8.0/MitDenkt.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MitDenkt/obj/Debug/net8.0/MitDenkt.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/MitDenkt/obj/Debug/net8.0/MitDenkt.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MitDenkt/obj/Debug/net8.0/apphost.exe" beforeDir="false" afterPath="$PROJECT_DIR$/MitDenkt/obj/Debug/net8.0/apphost.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MitDenkt/obj/Debug/net8.0/ref/MitDenkt.dll" beforeDir="false" afterPath="$PROJECT_DIR$/MitDenkt/obj/Debug/net8.0/ref/MitDenkt.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MitDenkt/obj/Debug/net8.0/refint/MitDenkt.dll" beforeDir="false" afterPath="$PROJECT_DIR$/MitDenkt/obj/Debug/net8.0/refint/MitDenkt.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MitDenkt/obj/MitDenkt.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/MitDenkt/obj/MitDenkt.csproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MitDenkt/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/MitDenkt/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MitDenkt/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/MitDenkt/obj/project.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MitDenkt/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/MitDenkt/obj/project.packagespec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MitDenkt/obj/rider.project.model.nuget.info" beforeDir="false" afterPath="$PROJECT_DIR$/MitDenkt/obj/rider.project.model.nuget.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MitDenkt/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/MitDenkt/obj/rider.project.restore.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/axios.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/axios.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/DayPilotScheduler.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/DaypilotView.vue" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/DaypilotView.vue" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -22,6 +47,9 @@
         <option value="Vue Composition API Component" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/MitDenkt/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.css.map" root0="FORCE_HIGHLIGHTING" />
@@ -42,11 +70,14 @@
   &quot;keyToString&quot;: {
     &quot;.NET Launch Settings Profile.MitDenkt: http.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;SolutionBuilderGeneralOptionsPage&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
   &quot;keyToStringList&quot;: {
@@ -111,7 +142,8 @@
       <option name="presentableId" value="Default" />
       <updated>1750845566252</updated>
       <workItem from="1750845567377" duration="18282000" />
-      <workItem from="1750922500471" duration="2359000" />
+      <workItem from="1750922500471" duration="3981000" />
+      <workItem from="1750927066380" duration="2936000" />
     </task>
     <servers />
   </component>

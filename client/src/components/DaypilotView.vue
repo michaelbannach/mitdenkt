@@ -4,7 +4,7 @@
 
 <script setup>
 import { ref, onMounted } from 'vue'
-import { DayPilotScheduler } from '@daypilot/daypilot-lite-vue'
+import { DayPilot, DayPilotScheduler } from '@daypilot/daypilot-lite-vue'
 import axios from '../axios'
 
 const config = ref({
@@ -21,8 +21,8 @@ const config = ref({
 
 onMounted(async () => {
   const [empRes, bookRes] = await Promise.all([
-    axios.get('/employees'),
-    axios.get('/bookings')
+    axios.get('/employee'),
+    axios.get('/booking')
   ])
 
   config.value.resources = empRes.data.map(e => ({

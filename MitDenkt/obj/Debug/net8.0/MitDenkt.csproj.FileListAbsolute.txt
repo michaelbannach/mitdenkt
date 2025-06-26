@@ -140,6 +140,4 @@ C:\Users\micha\RiderProjects\MitDenkt\MitDenkt\bin\Debug\net8.0\Microsoft.AspNet
 C:\Users\micha\RiderProjects\MitDenkt\MitDenkt\bin\Debug\net8.0\Microsoft.Extensions.Identity.Core.dll
 C:\Users\micha\RiderProjects\MitDenkt\MitDenkt\bin\Debug\net8.0\Microsoft.Extensions.Identity.Stores.dll
 C:\Users\micha\RiderProjects\MitDenkt\MitDenkt\bin\Debug\net8.0\Microsoft.Extensions.Options.dll
-C:\Users\micha\RiderProjects\MitDenkt\MitDenkt\bin\Debug\net8.0\MitDenkt.staticwebassets.endpoints.json
-C:\Users\micha\RiderProjects\MitDenkt\MitDenkt\obj\Debug\net8.0\staticwebassets.build.endpoints.json
-C:\Users\micha\RiderProjects\MitDenkt\MitDenkt\obj\Debug\net8.0\staticwebassets\msbuild.MitDenkt.Microsoft.AspNetCore.StaticWebAssetEndpoints.props
+C:\Users\micha\RiderProjects\MitDenkt\MitDenkt\obj\Debug\net8.0\MitDenkt.sourcelink.json

@@ -2,7 +2,7 @@
   "Files": [
     {
       "Id": "C:\\Users\\micha\\RiderProjects\\MitDenkt\\MitDenkt\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\MitDenkt.bundle.scp.css",
-      "PackagePath": "staticwebassets\\MitDenkt.e6nnubw1qw.bundle.scp.css"
+      "PackagePath": "staticwebassets\\MitDenkt.bundle.scp.css"
     },
     {
       "Id": "C:\\Users\\micha\\RiderProjects\\MitDenkt\\MitDenkt\\wwwroot\\css\\site.css",
@@ -243,10 +243,6 @@
     {
       "Id": "C:\\Users\\micha\\RiderProjects\\MitDenkt\\MitDenkt\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
-    },
-    {
-      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.MitDenkt.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
-      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
     },
     {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.MitDenkt.Microsoft.AspNetCore.StaticWebAssets.props",

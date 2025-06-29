@@ -15,4 +15,8 @@ public class Booking
     // Zeiträume der Buchungen
     public DateTime StartTime { get; set; }
     public DateTime EndTime { get; set; }
+    
+    
+    public ICollection<BookingService> BookingServices { get; set; } = new List<BookingService>();
+
 }

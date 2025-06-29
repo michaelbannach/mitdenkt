@@ -53,24 +53,30 @@ public class BookingController : ControllerBase
         return bookings;
     }
 
-    [Authorize]
+  
     [HttpPost]
-    public async Task<IActionResult> Create([FromBody] Booking booking)
+    public async Task<IActionResult> Create([FromBody] CreateBookingDto dto)
     {
         var email = User.Identity?.Name;
         var customer = await _context.Customers.FirstOrDefaultAsync(c => c.Email == email);
-        if (customer == null)
-            return Unauthorized();
+        if (customer == null) return Unauthorized();
 
-        booking.CustomerId = customer.Id;
-
-        if (booking.StartTime < DateTime.Now)
-            return BadRequest("Startzeit liegt in der Vergangenheit.");
+        var booking = new Booking
+        {
+            EmployeeId = dto.EmployeeId,
+            CustomerId = customer.Id,
+            StartTime = dto.StartTime,
+            EndTime = dto.EndTime,
+            BookingServices = dto.ServiceIds.Select(id => new BookingService
+            {
+                ServiceId = id
+            }).ToList()
+        };
 
         var conflict = await _context.Bookings.AnyAsync(b =>
             b.EmployeeId == booking.EmployeeId &&
-            booking.StartTime < b.EndTime &&
-            booking.EndTime > b.StartTime);
+            dto.StartTime < b.EndTime &&
+            dto.EndTime > b.StartTime);
 
         if (conflict)
             return BadRequest("Mitarbeiter ist zu diesem Zeitpunkt bereits gebucht.");
@@ -78,7 +84,7 @@ public class BookingController : ControllerBase
         _context.Bookings.Add(booking);
         await _context.SaveChangesAsync();
 
-        return Ok(booking);
+        return Ok();
     }
 
     // Buchung löschen

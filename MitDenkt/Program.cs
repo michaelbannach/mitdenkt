@@ -1,36 +1,44 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Identity;
-using Microsoft.Extensions.FileProviders;
 using MitDenkt.Data;
 using MitDenkt.Models;
+using MitDenkt.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
 var MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
 
-// Add services to the container.
+// Add services to the container
+builder.Services.AddScoped<BookingManager>();
+
+builder.Services.AddRazorPages();
+
 builder.Services.AddCors(options =>
 {
-    options.AddPolicy(name: MyAllowSpecificOrigins,
-        policy =>
-        {
-            policy.WithOrigins("http://localhost:5057")
-                .AllowAnyHeader()
-                .AllowAnyMethod()
-                .AllowCredentials();
-
-        });
+    options.AddPolicy(name: MyAllowSpecificOrigins, policy =>
+    {
+        policy.WithOrigins("http://localhost:5057")
+              .AllowAnyHeader()
+              .AllowAnyMethod()
+              .AllowCredentials();
+    });
 });
+
 builder.Services.AddControllersWithViews();
-builder.Services.AddDbContext<MitDenktContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
-builder.Services.AddIdentity<Customer, IdentityRole<int>>(options =>
+
+builder.Services.AddDbContext<MitDenktContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+builder.Services.AddDefaultIdentity<Customer>(options =>
 {
-    options.Password.RequireDigit = false; 
+    options.Password.RequireDigit = false;
     options.Password.RequireUppercase = false;
     options.User.RequireUniqueEmail = true;
 })
-    .AddEntityFrameworkStores<MitDenktContext>()
-    .AddDefaultTokenProviders();
+.AddRoles<IdentityRole<int>>() // optional: Rollen
+.AddEntityFrameworkStores<MitDenktContext>()
+.AddDefaultUI() // Razor Pages (z. B. Login)
+.AddDefaultTokenProviders();
 
 builder.Services.ConfigureApplicationCookie(options =>
 {
@@ -42,6 +50,7 @@ builder.Services.ConfigureApplicationCookie(options =>
 
 var app = builder.Build();
 
+// Seed-Datenbank mit Standarddaten
 using (var scope = app.Services.CreateScope())
 {
     var context = scope.ServiceProvider.GetRequiredService<MitDenktContext>();
@@ -56,17 +65,14 @@ using (var scope = app.Services.CreateScope())
 
     foreach (var employee in defaultEmployees)
     {
-        bool exists = context.Employees.Any(e =>
-            e.FirstName == employee.FirstName && e.LastName == employee.LastName);
-
-        if (!exists)
+        if (!context.Employees.Any(e => e.FirstName == employee.FirstName && e.LastName == employee.LastName))
         {
             context.Employees.Add(employee);
         }
     }
 
     context.SaveChanges();
-    
+
     if (!context.Bookings.Any())
     {
         var tina = context.Employees.FirstOrDefault(e => e.FirstName == "Tina");
@@ -84,49 +90,29 @@ using (var scope = app.Services.CreateScope())
             context.SaveChanges();
         }
     }
-
-
-// Configure the HTTP request pipeline.
-    if (!app.Environment.IsDevelopment())
-    {
-        app.UseExceptionHandler("/Home/Error");
-        // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
-        app.UseHsts();
-    }
-    else
-    {
-        app.UseHttpsRedirection();
-    }
-
-   
-    app.UseStaticFiles(new StaticFileOptions
-    {
-        FileProvider = new PhysicalFileProvider(
-            Path.Combine(builder.Environment.ContentRootPath, "client")),
-        RequestPath = "/client"
-    });
-    app.UseRouting();
-    var clientPath = Path.Combine(builder.Environment.ContentRootPath, "client");
-
-    if (Directory.Exists(clientPath))
-    {
-        app.UseDefaultFiles(new DefaultFilesOptions
-        {
-            FileProvider = new PhysicalFileProvider(clientPath),
-            RequestPath = ""
-        });
-
-        app.UseStaticFiles(new StaticFileOptions
-        {
-            FileProvider = new PhysicalFileProvider(clientPath),
-            RequestPath = ""
-        });
-    }
-    app.UseCors(MyAllowSpecificOrigins);
-    app.UseAuthentication();
-    app.UseAuthorization();
-
-    app.MapControllers();
-
-    app.Run();
 }
+
+// Configure middleware
+if (!app.Environment.IsDevelopment())
+{
+    app.UseExceptionHandler("/Home/Error");
+    app.UseHsts();
+}
+else
+{
+    app.UseHttpsRedirection();
+}
+
+// 👉 wwwroot verwenden
+app.UseDefaultFiles();   // z. B. index.html automatisch laden
+app.UseStaticFiles();    // z. B. style.css, img/logo.png etc.
+
+app.UseRouting();
+app.UseCors(MyAllowSpecificOrigins);
+app.UseAuthentication();
+app.UseAuthorization();
+
+app.MapControllers();
+app.MapRazorPages();
+
+app.Run();

@@ -1,8 +1,5 @@
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
-using MitDenkt.Data;
-using MitDenkt.Models;
+using MitDenkt.Services;
 using MitDenkt.Dtos;
 
 namespace MitDenkt.Controllers;
@@ -11,94 +8,49 @@ namespace MitDenkt.Controllers;
 [Route("api/[controller]")]
 public class BookingController : ControllerBase
 {
-    private readonly MitDenktContext _context;
+    private readonly BookingManager _bookingManager;
 
-    public BookingController(MitDenktContext context)
+    public BookingController(BookingManager bookingManager)
     {
-        _context = context;
+        _bookingManager = bookingManager;
     }
 
-    // Alle Buchungen (z. B. für Admin oder später eingeschränkt für Kunden)
+    // Alle Buchungen
     [HttpGet]
-    public async Task<IEnumerable<Booking>> GetAll() =>
-        await _context.Bookings
-            .Include(b => b.Customer)
-            .Include(b => b.Employee)
-            .ToListAsync();
-
-    // Buchungen an einem bestimmten Tag
-    [HttpGet("date/{date}")]
-    public async Task<ActionResult<IEnumerable<BookingDto>>> GetByDate(string date)
+    public async Task<IActionResult> GetAll()
     {
-        if (!DateTime.TryParse(date, out var targetDate))
+        var bookings = await _bookingManager.GetAllAsync();
+        return Ok(bookings);
+    }
+
+    // Buchungen eines Tages abrufen
+    [HttpGet("date/{date}")]
+    public async Task<IActionResult> GetByDate(string date)
+    {
+        if (!DateTime.TryParse(date, out var parsedDate))
             return BadRequest("Ungültiges Datum.");
 
-        var start = targetDate.Date;
-        var end = start.AddDays(1);
-
-        var bookings = await _context.Bookings
-            .Where(b => b.StartTime >= start && b.StartTime < end)
-            .Include(b => b.Employee)
-            .Select(b => new BookingDto
-            {
-                Id = b.Id,
-                EmployeeId = b.EmployeeId,
-                EmployeeName = b.Employee.FirstName + " " + b.Employee.LastName,
-                StartTime = b.StartTime,
-                EndTime = b.EndTime,
-                CanDelete = true // Optional: Später durch echten Kundenvergleich ersetzen
-            })
-            .ToListAsync();
-
-        return bookings;
+        var bookings = await _bookingManager.GetByDateAsync(parsedDate);
+        return Ok(bookings);
     }
 
-  
+    // Buchung erstellen
     [HttpPost]
     public async Task<IActionResult> Create([FromBody] CreateBookingDto dto)
     {
         var email = User.Identity?.Name;
-        var customer = await _context.Customers.FirstOrDefaultAsync(c => c.Email == email);
-        if (customer == null) return Unauthorized();
+        if (string.IsNullOrWhiteSpace(email))
+            return Unauthorized();
 
-        var booking = new Booking
-        {
-            EmployeeId = dto.EmployeeId,
-            CustomerId = customer.Id,
-            StartTime = dto.StartTime,
-            EndTime = dto.EndTime,
-            BookingServices = dto.ServiceIds.Select(id => new BookingService
-            {
-                ServiceId = id
-            }).ToList()
-        };
-
-        var conflict = await _context.Bookings.AnyAsync(b =>
-            b.EmployeeId == booking.EmployeeId &&
-            dto.StartTime < b.EndTime &&
-            dto.EndTime > b.StartTime);
-
-        if (conflict)
-            return BadRequest("Mitarbeiter ist zu diesem Zeitpunkt bereits gebucht.");
-
-        _context.Bookings.Add(booking);
-        await _context.SaveChangesAsync();
-
-        return Ok();
+        var result = await _bookingManager.CreateAsync(dto, email);
+        return result.Success ? Ok() : BadRequest(result.ErrorMessage);
     }
 
     // Buchung löschen
     [HttpDelete("{id}")]
     public async Task<IActionResult> Delete(int id)
     {
-        // ⚠️ In echter App: nur eigene Buchung löschbar
-        var booking = await _context.Bookings.FindAsync(id);
-        if (booking == null)
-            return NotFound();
-
-        _context.Bookings.Remove(booking);
-        await _context.SaveChangesAsync();
-
-        return NoContent();
+        var deleted = await _bookingManager.DeleteAsync(id);
+        return deleted ? NoContent() : NotFound();
     }
 }

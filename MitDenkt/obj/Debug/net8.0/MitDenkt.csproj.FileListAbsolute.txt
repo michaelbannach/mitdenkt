@@ -125,9 +125,7 @@ C:\Users\micha\RiderProjects\MitDenkt\MitDenkt\obj\Debug\net8.0\staticwebassets\
 C:\Users\micha\RiderProjects\MitDenkt\MitDenkt\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.MitDenkt.props
 C:\Users\micha\RiderProjects\MitDenkt\MitDenkt\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.MitDenkt.props
 C:\Users\micha\RiderProjects\MitDenkt\MitDenkt\obj\Debug\net8.0\staticwebassets.pack.json
-C:\Users\micha\RiderProjects\MitDenkt\MitDenkt\obj\Debug\net8.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
 C:\Users\micha\RiderProjects\MitDenkt\MitDenkt\obj\Debug\net8.0\scopedcss\bundle\MitDenkt.styles.css
-C:\Users\micha\RiderProjects\MitDenkt\MitDenkt\obj\Debug\net8.0\scopedcss\projectbundle\MitDenkt.bundle.scp.css
 C:\Users\micha\RiderProjects\MitDenkt\MitDenkt\obj\Debug\net8.0\MitDenkt.csproj.Up2Date
 C:\Users\micha\RiderProjects\MitDenkt\MitDenkt\obj\Debug\net8.0\MitDenkt.dll
 C:\Users\micha\RiderProjects\MitDenkt\MitDenkt\obj\Debug\net8.0\refint\MitDenkt.dll
@@ -141,3 +139,6 @@ C:\Users\micha\RiderProjects\MitDenkt\MitDenkt\bin\Debug\net8.0\Microsoft.Extens
 C:\Users\micha\RiderProjects\MitDenkt\MitDenkt\bin\Debug\net8.0\Microsoft.Extensions.Identity.Stores.dll
 C:\Users\micha\RiderProjects\MitDenkt\MitDenkt\bin\Debug\net8.0\Microsoft.Extensions.Options.dll
 C:\Users\micha\RiderProjects\MitDenkt\MitDenkt\obj\Debug\net8.0\MitDenkt.sourcelink.json
+C:\Users\micha\RiderProjects\MitDenkt\MitDenkt\bin\Debug\net8.0\Microsoft.AspNetCore.Identity.UI.dll
+C:\Users\micha\RiderProjects\MitDenkt\MitDenkt\bin\Debug\net8.0\Microsoft.Extensions.FileProviders.Embedded.dll
+C:\Users\micha\RiderProjects\MitDenkt\MitDenkt\obj\Debug\net8.0\MitDenkt.MvcApplicationPartsAssemblyInfo.cs

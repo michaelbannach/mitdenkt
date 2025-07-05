@@ -1,10 +1,6 @@
 {
   "Files": [
     {
-      "Id": "C:\\Users\\micha\\RiderProjects\\MitDenkt\\MitDenkt\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\MitDenkt.bundle.scp.css",
-      "PackagePath": "staticwebassets\\MitDenkt.bundle.scp.css"
-    },
-    {
       "Id": "C:\\Users\\micha\\RiderProjects\\MitDenkt\\MitDenkt\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
@@ -13,8 +9,48 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
-      "Id": "C:\\Users\\micha\\RiderProjects\\MitDenkt\\MitDenkt\\wwwroot\\js\\site.js",
-      "PackagePath": "staticwebassets\\js\\site.js"
+      "Id": "C:\\Users\\micha\\RiderProjects\\MitDenkt\\MitDenkt\\wwwroot\\img\\Haarvision_Logo.png",
+      "PackagePath": "staticwebassets\\img\\Haarvision_Logo.png"
+    },
+    {
+      "Id": "C:\\Users\\micha\\RiderProjects\\MitDenkt\\MitDenkt\\wwwroot\\img\\portrait_1.png",
+      "PackagePath": "staticwebassets\\img\\portrait_1.png"
+    },
+    {
+      "Id": "C:\\Users\\micha\\RiderProjects\\MitDenkt\\MitDenkt\\wwwroot\\img\\portrait_2.png",
+      "PackagePath": "staticwebassets\\img\\portrait_2.png"
+    },
+    {
+      "Id": "C:\\Users\\micha\\RiderProjects\\MitDenkt\\MitDenkt\\wwwroot\\img\\portrait_3.png",
+      "PackagePath": "staticwebassets\\img\\portrait_3.png"
+    },
+    {
+      "Id": "C:\\Users\\micha\\RiderProjects\\MitDenkt\\MitDenkt\\wwwroot\\img\\portrait_4.png",
+      "PackagePath": "staticwebassets\\img\\portrait_4.png"
+    },
+    {
+      "Id": "C:\\Users\\micha\\RiderProjects\\MitDenkt\\MitDenkt\\wwwroot\\index.html",
+      "PackagePath": "staticwebassets\\index.html"
+    },
+    {
+      "Id": "C:\\Users\\micha\\RiderProjects\\MitDenkt\\MitDenkt\\wwwroot\\js\\booking-modal.js",
+      "PackagePath": "staticwebassets\\js\\booking-modal.js"
+    },
+    {
+      "Id": "C:\\Users\\micha\\RiderProjects\\MitDenkt\\MitDenkt\\wwwroot\\js\\calendar-events.js",
+      "PackagePath": "staticwebassets\\js\\calendar-events.js"
+    },
+    {
+      "Id": "C:\\Users\\micha\\RiderProjects\\MitDenkt\\MitDenkt\\wwwroot\\js\\calendar-ui.js",
+      "PackagePath": "staticwebassets\\js\\calendar-ui.js"
+    },
+    {
+      "Id": "C:\\Users\\micha\\RiderProjects\\MitDenkt\\MitDenkt\\wwwroot\\js\\main.js",
+      "PackagePath": "staticwebassets\\js\\main.js"
+    },
+    {
+      "Id": "C:\\Users\\micha\\RiderProjects\\MitDenkt\\MitDenkt\\wwwroot\\js\\utils.js",
+      "PackagePath": "staticwebassets\\js\\utils.js"
     },
     {
       "Id": "C:\\Users\\micha\\RiderProjects\\MitDenkt\\MitDenkt\\wwwroot\\lib\\bootstrap\\LICENSE",

@@ -1,0 +1,36 @@
+
+services:
+  db:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    container_name: mitdenkt-db
+    environment:
+      SA_PASSWORD: ${DB_PASSWORD}
+      ACCEPT_EULA: "Y"
+      TZ: Europe/Berlin
+    ports:
+      - "1433:1433"
+    volumes:
+      - sqlvolume:/var/opt/mssql
+        
+    # healthcheck:
+     # test: [ "CMD-SHELL", "sqlcmd -S localhost -U sa -P ${DB_PASSWORD} -Q 'SELECT 1'" ]
+     # interval: 20s
+     # timeout: 5s
+     # retries: 10
+
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: mitdenkt-app
+    depends_on:
+     - db
+        
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ConnectionStrings__DefaultConnection: Server=${DB_HOST};Database=${DB_NAME};User Id=${DB_USER};Password=${DB_PASSWORD};Encrypt=False;TrustServerCertificate=True
+    ports:
+      - "5057:8080"
+
+volumes:
+  sqlvolume:

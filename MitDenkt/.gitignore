@@ -1,0 +1,29 @@
+#  Rider / JetBrains
+.idea/
+*.sln.DotSettings*
+appsettings.Development.json
+
+#  Build-Ordner
+bin/
+obj/
+
+#  User-spezifische Dateien
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+#  Umgebungsdateien
+.env
+
+#  Logs
+*.log
+
+
+#  Datenbank-Dateien
+*.db
+*.bak
+
+#  Secrets/Temp
+secrets.json
+temp/

@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using MitDenkt.Data;
 
@@ -11,9 +12,11 @@ using MitDenkt.Data;
 namespace MitDenkt.Migrations
 {
     [DbContext(typeof(MitDenktContext))]
-    partial class MitDenktContextModelSnapshot : ModelSnapshot
+    [Migration("20250707092331_ChangeDateTimeOffset")]
+    partial class ChangeDateTimeOffset
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

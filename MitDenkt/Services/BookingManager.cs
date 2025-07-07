@@ -1,4 +1,5 @@
 using Microsoft.EntityFrameworkCore;
+using System.Linq.Expressions;
 using MitDenkt.Data;
 using MitDenkt.Dtos;
 using MitDenkt.Models;
@@ -22,24 +23,28 @@ public class BookingManager
             .ToListAsync();
     }
 
-    public async Task<List<BookingDto>> GetByDateAsync(DateTime targetDate)
+    public async Task<List<BookingDto>> GetByDateAsync(DateTimeOffset targetDate)
     {
-        var start = targetDate.Date;
+        var berlinTz = TimeZoneInfo.FindSystemTimeZoneById("Europe/Berlin");
+        var offset = berlinTz.GetUtcOffset(targetDate.Date);
+
+        var start = new DateTimeOffset(targetDate.Date, offset);
         var end = start.AddDays(1);
 
-        return await _context.Bookings
+        var bookings = await _context.Bookings
             .Where(b => b.StartTime >= start && b.StartTime < end)
             .Include(b => b.Employee)
-            .Select(b => new BookingDto
-            {
-                Id = b.Id,
-                EmployeeId = b.EmployeeId,
-                EmployeeName = b.Employee.FirstName + " " + b.Employee.LastName,
-                StartTime = b.StartTime,
-                EndTime = b.EndTime,
-                CanDelete = true
-            })
             .ToListAsync();
+
+        return bookings.Select(b => new BookingDto
+        {
+            Id = b.Id,
+            EmployeeId = b.EmployeeId,
+            EmployeeName = b.Employee.FirstName + " " + b.Employee.LastName,
+            StartTime = b.StartTime,
+            EndTime = b.EndTime,
+            CanDelete = true
+        }).ToList();
     }
 
     public async Task<(bool Success, string? ErrorMessage)> CreateAsync(CreateBookingDto dto, string? userEmail)

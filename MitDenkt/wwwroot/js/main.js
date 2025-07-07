@@ -1,6 +1,4 @@
 // Import von Funktionen aus separaten Modulen
-
-
 // UI-Funktionen für Kalendarnavigation und Minikalendar (im Header)
 import { renderMiniCalendar, renderWeekNav, updateDateLabel } from './calendar-ui.js';
 

@@ -27,7 +27,7 @@ public class BookingController : ControllerBase
     [HttpGet("date/{date}")]
     public async Task<IActionResult> GetByDate(string date)
     {
-        if (!DateTime.TryParse(date, out var parsedDate))
+        if (!DateTimeOffset.TryParse(date, out var parsedDate))
             return BadRequest("Ungültiges Datum.");
 
         var bookings = await _bookingManager.GetByDateAsync(parsedDate);

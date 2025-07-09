@@ -34,12 +34,12 @@ Schnellstart mit Docker
 
 1. .env Datei erstellen
 
-env
+```
 DB_HOST=mitdenkt-db
 DB_NAME=MitDenktDb
 DB_USER=sa
 DB_PASSWORD=Ghr!24x@Db
-
+```
 
 
 2. Docker-Container starten

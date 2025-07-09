@@ -55,9 +55,9 @@ DB_PASSWORD=Ghr!24x@Db
 
 ### 2. Docker-Container starten
 
-bash
+```
 docker-compose up --build
-
+```
 
 
 ### 3. Datenbank-Migration (wenn nötig)

@@ -17,10 +17,17 @@ Ideal für Friseure, Kosmetikstudios oder andere Dienstleistungen mit Terminverg
 
 
  Screenshots
+
+ Kalendar mit getätigten Buchungen
 ![Kalenderübersicht](MitDenkt/wwwroot/img/Kalendar_Übersicht.png)
-![Kalenderübersicht](./img/Kalendar_Übersicht.png)
-![Buchungsmodal](./img/Buchungsfenster.png)
-![Mini-Kalendar_Detail](./img/Mini-Kalendar_Detail.png)
+
+
+Buchungsfenster mit Dienstleistungen und summierten Preis
+![Kalenderübersicht](MitDenkt/wwwroot/img/Buchungsfenster.png)
+
+
+Detailansicht des Mini-Kalendars
+![Mini-Kalendar_Detail](MitDenkt/wwwroot/img/Mini-Kalendar_Detail.png)
 
 
 Schnellstart mit Docker

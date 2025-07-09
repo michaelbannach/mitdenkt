@@ -34,7 +34,7 @@ namespace MitDenkt.Data
                     new Service { Name = "Farbe: Komplett", Category = "Farbe", DurationMinutes = 60, Price = 55 },
                     new Service { Name = "Strähnen", Category = "Farbe", DurationMinutes = 90, Price = 70 },
                     new Service { Name = "Haarkur", Category = "Pflege", DurationMinutes = 30, Price = 15 },
-                    new Service { Name = "Waschen & Föhnen", Category = "Pflege", DurationMinutes = 25, Price = 18 },
+                    new Service { Name = "Waschen & Föhnen", Category = "Pflege", DurationMinutes = 30, Price = 18 },
                     new Service { Name = "Augenbrauen zupfen", Category = "Extra", DurationMinutes = 15, Price = 8 },
                     new Service { Name = "Wimpern färben", Category = "Extra", DurationMinutes = 15, Price = 10 }
                 );
@@ -44,8 +44,8 @@ namespace MitDenkt.Data
 
             // Demo-Nutzer
             var userManager = scope.ServiceProvider.GetRequiredService<UserManager<Customer>>();
-            string demoEmail = "demo@mitdenkt.de";
-            string demoPassword = "Test123!";
+            string demoEmail = "demonutzer@mitdenkt.de";
+            string demoPassword = "GrandiosesPasswort1!";
 
             if (await userManager.FindByEmailAsync(demoEmail) == null)
             {

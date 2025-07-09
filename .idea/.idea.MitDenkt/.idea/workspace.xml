@@ -11,10 +11,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="108ed49c-43d1-40fc-a621-fdf36e3d4c4b" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/MitDenkt/wwwroot/img/Buchungsfenster.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MitDenkt/wwwroot/img/Kalendar_Übersicht.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MitDenkt/wwwroot/img/Mini-Kalendar_Detail.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.MitDenkt/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MitDenkt/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MitDenkt/Data/DbSeeder.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MitDenkt/Data/DbSeeder.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MitDenkt/obj/Debug/net8.0/MitDenkt.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MitDenkt/obj/Debug/net8.0/MitDenkt.AssemblyInfo.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MitDenkt/obj/Debug/net8.0/MitDenkt.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/MitDenkt/obj/Debug/net8.0/MitDenkt.AssemblyInfoInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MitDenkt/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MitDenkt/Program.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -175,7 +177,7 @@
       <workItem from="1751711958269" duration="15831000" />
       <workItem from="1751794401914" duration="9788000" />
       <workItem from="1751880165309" duration="10623000" />
-      <workItem from="1752046360153" duration="2180000" />
+      <workItem from="1752046360153" duration="6182000" />
     </task>
     <servers />
   </component>

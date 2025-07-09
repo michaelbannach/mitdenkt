@@ -62,8 +62,8 @@ else
     app.UseHttpsRedirection();
 }
 
-app.UseDefaultFiles();   // z. B. index.html automatisch laden
-app.UseStaticFiles();    // z. B. style.css, img/logo.png etc.
+app.UseDefaultFiles();   
+app.UseStaticFiles();   
 
 app.UseRouting();
 app.UseCors(MyAllowSpecificOrigins);

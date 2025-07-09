@@ -14,7 +14,7 @@ namespace MitDenkt.Data
             // Automatisch Migrationen anwenden
             context.Database.Migrate();
 
-            // === Mitarbeiter ===
+            // Mitarbeiter 
             if (!context.Employees.Any())
             {
                 context.Employees.AddRange(
@@ -25,7 +25,7 @@ namespace MitDenkt.Data
                 );
             }
 
-            // === Dienstleistungen ===
+            //Dienstleistungen
             if (!context.Services.Any())
             {
                 context.Services.AddRange(
@@ -42,7 +42,7 @@ namespace MitDenkt.Data
 
             await context.SaveChangesAsync();
 
-            // === Demo-Nutzer ===
+            // Demo-Nutzer
             var userManager = scope.ServiceProvider.GetRequiredService<UserManager<Customer>>();
             string demoEmail = "demo@mitdenkt.de";
             string demoPassword = "Test123!";
@@ -67,7 +67,7 @@ namespace MitDenkt.Data
                 }
             }
 
-            // === Beispiel-Buchung ===
+            //  Beispiel-Buchung 
             if (!context.Bookings.Any())
             {
                 var tina = context.Employees.FirstOrDefault(e => e.FirstName == "Tina");

@@ -60,20 +60,13 @@ docker-compose up --build
 ```
 
 
-### 3. Datenbank-Migration (wenn nötig)
-
-bash
-docker exec -it mitdenkt-app dotnet ef database update
-
-
-
-### 4. Im Browser öffnen
+### 3. Im Browser öffnen
 
 http://localhost:5057
 
 
 
-### 5. Login 
+### 4. Login 
 Nach dem ersten Start ist ein Demo-Nutzer automatisch vorhanden (siehe dbseeder.cs im Ordner Data):
 
 - Benutzername: demonutzer@mitdenkt.de

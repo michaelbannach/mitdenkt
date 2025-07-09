@@ -17,7 +17,7 @@ Ideal für Friseure, Kosmetikstudios oder andere Dienstleistungen mit Terminverg
 
 
  Screenshots
-
+![Kalenderübersicht](MitDenkt/wwwroot/img/Kalendar_Übersicht.png)
 ![Kalenderübersicht](./img/Kalendar_Übersicht.png)
 ![Buchungsmodal](./img/Buchungsfenster.png)
 ![Mini-Kalendar_Detail](./img/Mini-Kalendar_Detail.png)

@@ -13,7 +13,7 @@ Ideal für Friseure, Kosmetikstudios oder andere Dienstleistungen mit Terminverg
   - Grafische Darstellung der gebuchten Dienstleistungen im Grid
   - Vollständig containerisiert mit Docker & SQL Server
   - Zeitzonen-Korrektur für konsistente Buchungen (z. B. Europe/Berlin)
-  - RESTful API (JSON) & modernes Frontend (JS, Bootstrap)
+  - RESTful API (JSON) & modernes Frontend (JS, CSS)
 
   ## Technologie-Stack
 

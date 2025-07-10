@@ -48,10 +48,10 @@ builder.Services.ConfigureApplicationCookie(options =>
 
 var app = builder.Build();
 
-// === Datenbank seeden ===
+
 await DbSeeder.Seed(app.Services);
 
-// === Middleware-Konfiguration ===
+
 if (!app.Environment.IsDevelopment())
 {
     app.UseExceptionHandler("/Home/Error");

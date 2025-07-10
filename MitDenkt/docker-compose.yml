@@ -12,11 +12,6 @@ services:
     volumes:
       - sqlvolume:/var/opt/mssql
         
-    # healthcheck:
-     # test: [ "CMD-SHELL", "sqlcmd -S localhost -U sa -P ${DB_PASSWORD} -Q 'SELECT 1'" ]
-     # interval: 20s
-     # timeout: 5s
-     # retries: 10
 
   app:
     build:

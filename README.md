@@ -56,6 +56,7 @@ DB_PASSWORD=Ghr!24x@Db
 ### 2. Docker-Container starten
 
 ```
+cd MitDenkt
 docker-compose up --build
 ```
 

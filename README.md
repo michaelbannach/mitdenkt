@@ -73,6 +73,7 @@ Nach dem ersten Start ist ein Demo-Nutzer automatisch vorhanden (siehe dbseeder.
 - Benutzername: demonutzer@mitdenkt.de
 - Passwort: GrandiosesPasswort1!
 
+Login unter http://localhost:5127/Identity/Account/Login
 
 ## Weiterentwicklungsideen
 
